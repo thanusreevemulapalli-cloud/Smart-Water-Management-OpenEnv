@@ -1,0 +1,29 @@
+name: smart-water-env
+version: "1.0"
+entry_point: smart_water_env:SmartWaterEnv
+
+observation_space:
+  type: object
+  properties:
+    reservoir_level:
+      type: float
+    household_demand:
+      type: float
+    industrial_demand:
+      type: float
+    energy_cost:
+      type: float
+    leakage_rate:
+      type: float
+
+action_space:
+  type: object
+  properties:
+    household_supply:
+      type: float
+      industrial_supply:
+      type: float
+
+reward_range:
+  min: 0.0
+  max: 1.0
